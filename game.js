@@ -1,6 +1,3 @@
-// game.js - Two modes: Guess the Letter & Collect Letters to Make Words
-// Replace or add your own letter images under /assets/letters with filenames A.svg, B.svg, ...
-
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 // Sample words for collect mode. You can edit /words.json or change this array.
 let WORDS = ['CAT','DOG','BREAD','HAND','SIGN','DEAF','HELLO','TREE','FAMILY'];
@@ -111,7 +108,7 @@ async function startCollectMode(){
   poolWrap.innerHTML='';
   // helper to try multiple extensions then fallback to placeholder
   function setLetterImgSrc(img, letter){
-    const exts = ['.jpg','.png','.svg'];
+    const exts = ['.jpg'];
     let i = 0;
     function tryNext(){
       if(i>=exts.length){
@@ -129,7 +126,7 @@ async function startCollectMode(){
         return;
       }
       img.onerror = tryNext;
-      img.src = letter +'.jpg' +  exts[i];
+      img.src = letter +  exts[i];
       i++;
     }
     tryNext();
