@@ -53,9 +53,9 @@ async function startGuessMode(){
     const pool = LETTERS.slice(0,10); // adjust as you add images
     const correct = pick(pool,1)[0];
     // build image path (user should replace assets/letters/LETTER.svg with their own images)
-    img.src = '/assets/letters/' + correct + '.jpg';
+    img.src = '' + correct + '.jpg';
     img.onerror = ()=>{
-      img.src = '/assets/letters/placeholder.svg';
+      img.src = 'placeholder.svg';
     }
     // create 4 choices (1 correct + 3 random)
     const opts = [correct].concat(pick(pool.filter(x=>x!==correct),3));
