@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Deaf Community — Letter Games</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <h1>Deaf Community — Letter Games</h1>
+      <p class="subtitle">
+        Two playful modes: <strong>Guess the Letter</strong> &
+        <strong>Collect to Make Words</strong>
+      </p>
+    </header>
+
+    <main class="container">
+      <section class="mode-select">
+        <button id="mode-guess" class="btn primary">
+          Play: Guess the Letter
+          <div class="sub">Match the image to the correct letter</div>
+        </button>
+        <button id="mode-collect" class="btn ghost">
+          Play: Collect Letters (Make Words)
+          <div class="sub">Pick letters to form the target word</div>
+        </button>
+      </section>
+
+      <section id="game-area" class="game-area" aria-live="polite">
+        <!-- Game screens are injected here -->
+      </section>
+
+      <section class="controls">
+        <button id="btn-back" class="btn ghost">Back to menu</button>
+        <div id="status" class="status" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      
+    </footer>
+
+    <script src="game.js"></script>
+  </body>
+</html>
