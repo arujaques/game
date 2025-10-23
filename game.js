@@ -129,7 +129,7 @@ async function startCollectMode(){
         return;
       }
       img.onerror = tryNext;
-      img.src = '.jpg' + letter + exts[i];
+      img.src = letter +'.jpg' +  exts[i];
       i++;
     }
     tryNext();
